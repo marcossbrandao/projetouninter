@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("fundo-main.jpg");
+    background-position: center;
+    background-size: cover;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.navbar .logo span {
+    color: #C06B3E;
+}
+
+.navbar .menu-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar a {
+    color: #ffff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #C06B3E;
+}
+
+.main-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.main-section .content{
+    color: #ffff;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.main-section .content h1 {
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.main-section .content p {
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+.main-section .content button {
+    background: #ffff;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 38px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.main-section .content button:hover {
+    color: #ffff;
+    background: #C06B3E;
+}
+
+#menu-btn {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+#close-menu-btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    #close-menu-btn, #menu-btn {
+        display: block;
+    }
+    .navbar .menu-links {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background: #ffff;
+        padding: 70px 40px 0;
+        transition: left 0.310s ease;
+    }
+
+    header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+    }
+
+    .navbar a {
+        color: black;
+    }
+}
